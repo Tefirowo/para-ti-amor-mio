@@ -3,292 +3,297 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poemas para el Amor de Mi Vida</title>
+    <title>Antito, amor de mi vida</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #ffe6e6;
+            font-family: 'Georgia', serif;
+            background-color: #fffaf0;
             color: #333;
             margin: 0;
             padding: 0;
-            text-align: center;
+            background-image: url('https://marketplace.canva.com/EAF5ckQLPlQ/1/0/900w/canva-pink-white-watercolor-floral-instagram-story-background-1P2cYYQ3wEE.jpg');
+            background-size: cover;
+            background-attachment: fixed;
         }
-
         header {
-            background-color: #ffcccc;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            padding: 50px 20px;
+            background-color: rgba(255, 182, 193, 0.8);
+            border-bottom: 3px solid #ff69b4;
         }
-
         header h1 {
-            font-size: 2.5rem;
+            font-family: 'Times', cursive;
+            font-size: 3em;
+            color: #b22222;
             margin: 0;
-            color: #b30000;
         }
-
-        .poem-container {
-            padding: 20px;
-            margin: 20px;
-            background-color: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin: auto;
+        #poem-selector {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
         }
-
-        .poem-container h2 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-            color: #800000;
-        }
-
-        .poem-container p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            white-space: pre-wrap; /* Mantener formato de los poemas */
-        }
-
-        footer {
-            background-color: #ffcccc;
+        #poem-selector select {
             padding: 10px;
-            margin-top: 20px;
-            color: #b30000;
+            font-size: 1.2em;
+            border-radius: 5px;
+            border: 2px solid #ff69b4;
         }
-
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
-            .poem-container h2 {
-                font-size: 1.5rem;
-            }
-
-            .poem-container p {
-                font-size: 1rem;
-            }
+        #poem-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: rgba(255, 240, 245, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .poem {
+            display: none;
+        }
+        .poem.active {
+            display: block;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 182, 193, 0.8);
+            border-top: 3px solid #ff69b4;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        footer p {
+            margin: 0;
+            font-family: 'Pacifico', cursive;
+            color: #b22222;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Poemas para el Amor de Mi Vida</h1>
-    </header>
 
-    <!-- Poema 1 -->
-    <div class="poem-container">
-        <h2>Poema 1 - Ene 30, 2023</h2>
-        <p>
-            Mi querida Antito, mi amor por ti siempre crece,
-            en tus notas suaves, mi corazón late.
-            Tu voz melodiosa, me hace vibrar con cada canción,
-            en cada nota que cantas, mi alma se siente unión.
+<header>
+    <h1>Antito, amor de mi vida</h1>
+</header>
 
-            Eres mi sol en el día, mi estrella en la noche,
-            tu sonido me hace sentir, que todo está bien.
-            Juntos creamos una armonía eterna,
-            nuestro amor por la música, siempre constante será.
+<div id="poem-selector">
+    <select id="poemSelect">
+        <!-- These options are easy to edit -->
+        <option value="poem1">30/01/2023</option>
+        <option value="poem2">25/02/2023</option>
+        <option value="poem3">06/06/2023</option>
+        <option value="poem4">17/07/2023</option>
+        <option value="poem5">21/08/2023</option>
+        <option value="poem6">29/08/2023</option>
+        <option value="poem7">22/12/2023</option>
+    </select>
+</div>
 
-            Eres mi compañera en este viaje musical,
-            mi mejor amiga y mi preciosa amante.
-            Nuestra música juntos, es el corazón de mi vida,
-            mi amor por ti, siempre será mi fuerza y mi guía.
-
-            Antito mi querida, nunca dejes de cantar,
-            porque tu voz es la música de mi corazón.
-            Eres mi amor, mi pasión, mi todo y
-            mi compañera en esta canción.
-        </p>
+<div id="poem-content">
+    <!-- Easy to edit poem content -->
+    <div id="poem1" class="poem active">
+        <h2>Poema del 30/01/2023</h2>
+        <p>Mi querida Antito, mi amor por ti siempre crece,<br>
+        en tus notas suaves, mi corazón late.<br>
+        Tu voz melodiosa, me hace vibrar con cada canción,<br>
+        en cada nota que cantas, mi alma se siente unión.</p>
+        
+        <p>Eres mi sol en el día, mi estrella en la noche,<br>
+        tu sonido me hace sentir, que todo está bien.<br>
+        Juntos creamos una armonía eterna,<br>
+        nuestro amor por la música, siempre constante será.</p>
+        
+        <p>Eres mi compañera en este viaje musical,<br>
+        mi mejor amiga y mi preciosa amante.<br>
+        Nuestra música juntos, es el corazón de mi vida,<br>
+        mi amor por ti, siempre será mi fuerza y mi guía.</p>
+        
+        <p>Antito mi querida, nunca dejes de cantar,<br>
+        porque tu voz es la música de mi corazón.<br>
+        Eres mi amor, mi pasión, mi todo y<br>
+        mi compañera en esta canción.</p>
     </div>
 
-    <!-- Poema 2 -->
-    <div class="poem-container">
-        <h2>Poema 2 - Feb 25, 2023</h2>
-        <p>
-            Antito, Antito, mi amor,
-            con tu voz dulce como miel,
-            y tu cabello largo y hermoso,
-            haces que mi corazón vuele.
-
-            Cada vez que cantas, mi alma se alegra,
-            y cuando te veo, mi corazón se acelera,
-            me enamoré de tus ojos brillantes,
-            que me hacen perder la cabeza.
-
-            Eres mi musa, mi inspiración,
-            como pianista, tocaré tu canción,
-            juntas haremos música divina,
-            mi Antito, mi amor, mi chica fina.
-
-            No puedo resistirme a tu encanto,
-            me tienes en tus manos como un manto,
-            prometo amarte con todo mi ser,
-            mi linda cantante, mi Antito mujer.
-        </p>
+    <div id="poem2" class="poem">
+        <h2>Poema del 25/02/2023</h2>
+        <p>Antito, Antito, mi amor,<br>
+        con tu voz dulce como miel,<br>
+        y tu cabello largo y hermoso,<br>
+        haces que mi corazón vuele.</p>
+        
+        <p>Cada vez que cantas, mi alma se alegra,<br>
+        y cuando te veo, mi corazón se acelera,<br>
+        me enamoré de tus ojos brillantes,<br>
+        que me hacen perder la cabeza.</p>
+        
+        <p>Eres mi musa, mi inspiración,<br>
+        como pianista, tocaré tu canción,<br>
+        juntas haremos música divina,<br>
+        mi Antito, mi amor, mi chica fina.</p>
+        
+        <p>No puedo resistirme a tu encanto,<br>
+        me tienes en tus manos como un manto,<br>
+        prometo amarte con todo mi ser,<br>
+        mi linda cantante, mi Antito mujer.</p>
     </div>
 
-    <!-- Poema 3 -->
-    <div class="poem-container">
-        <h2>Poema 3 - Jun 6, 2023</h2>
-        <p>
-            En el vasto abismo de la vida,
-            donde la sombra acecha sin cesar,
-            surge un resquicio de luz,
-            que enciende un amor imposible de negar.
-
-            En esta triste y fría existencia,
-            donde el pesar se cierne con fervor,
-            tu presencia se torna un consuelo,
-            un oasis en mi desierto interior.
-
-            Bajo el manto de nuestras penas,
-            florecen susurros de ternura,
-            la pasión se mezcla con la angustia,
-            en un baile eterno de amarga dulzura.
-
-            Como un gato que acecha en la noche,
-            nuestro amor se funde con la lujuria,
-            exploramos la oscuridad juntos,
-            Y contigo, vivir mi eternidad.
-
-            Así, en este filme de desencanto,
-            nuestros cuerpos se entrelazan con fervor,
-            buscando una chispa de esperanza,
-            en mi historia de amor sin resplandor.
-
-            Pero aun en mi pesimismo inherente,
-            sé que el amor puede ser un faro,
-            un destello de luz en la oscuridad,
-            que nos guía en el abismo más amargo.
-
-            Antonia, en este universo sombrío,
-            permíteme ser tu depresiva poeta,
-        </p>
+    <div id="poem3" class="poem">
+        <h2>Poema del 06/06/2023</h2>
+        <p>En el vasto abismo de la vida,<br>
+        donde la sombra acecha sin cesar,<br>
+        surge un resquicio de luz,<br>
+        que enciende un amor imposible de negar.</p>
+        
+        <p>En esta triste y fría existencia,<br>
+        donde el pesar se cierne con fervor,<br>
+        tu presencia se torna un consuelo,<br>
+        un oasis en mi desierto interior.</p>
+        
+        <p>Bajo el manto de nuestras penas,<br>
+        florecen susurros de ternura,<br>
+        la pasión se mezcla con la angustia,<br>
+        en un baile eterno de amarga dulzura.</p>
+        
+        <p>Como un gato que acecha en la noche,<br>
+        nuestro amor se funde con la lujuria,<br>
+        exploramos la oscuridad juntos,<br>
+        Y contigo, vivir mi eternidad.</p>
+        
+        <p>Así, en este filme de desencanto,<br>
+        nuestros cuerpos se entrelazan con fervor,<br>
+        buscando una chispa de esperanza,<br>
+        en mi historia de amor sin resplandor.</p>
+        
+        <p>Pero aun en mi pesimismo inherente,<br>
+        sé que el amor puede ser un faro,<br>
+        un destello de luz en la oscuridad,<br>
+        que nos guía en el abismo más amargo.</p>
+        
+        <p>Antonia, en este universo sombrío,<br>
+        permíteme ser tu depresiva poeta,</p>
     </div>
 
-    <!-- Poema 4 -->
-    <div class="poem-container">
-        <h2>Poema 4 - Jul 17, 2023</h2>
-        <p>
-            Ardiendo, al despertar,
-            Nuestros sueños tejen
-            Ternura infinita,
-            Inmensa pasión,
-            Tiembla mi voz,
-            Oscuro deseo
-            Te abraza.
-
-            Eclipsando temores,
-            Amarte es una dulce locura,
-            Mágica presencia,
-            Ondas de emoción.
-
-            Antito, te amo,
-            Mis latidos susurran
-            Olas de amor eterno.
-        </p>
+    <div id="poem4" class="poem">
+        <h2>Poema del 17/07/2023</h2>
+        <p>Ardiendo, al despertar,<br>
+        Nuestros sueños tejen<br>
+        Ternura infinita,<br>
+        Inmensa pasión,<br>
+        Tiembla mi voz,<br>
+        Oscuro deseo<br>
+        Te abraza.</p>
+        
+        <p>Eclipsando temores,<br>
+        Amarte es una dulce locura,<br>
+        Mágica presencia,<br>
+        Ondas de emoción.</p>
+        
+        <p>Antito, te amo,<br>
+        Mis latidos susurran<br>
+        Olas de amor eterno.</p>
     </div>
 
-    <!-- Poema 5 -->
-    <div class="poem-container">
-        <h2>Poema 5 - Ago 21, 2023</h2>
-        <p>
-            Bajo el cielo estrellado, mi Antito querida,
-            Mi amor, mi vida, mi musa encendida.
-            Eres el sol que alumbra mis días sin fin,
-            En cada rincón de mi alma te siento latir.
-
-            Quiero verte, oh Anto, en cada amanecer,
-            Y abrazarte fuerte, mi mundo, mi ser.
-            Tu imagen obsesiona mis pensamientos soñadores,
-            Eres mi refugio, mi puerto de amores.
-
-            Te necesito como el mar a la orilla ansía,
-            En cada instante más, mi razón y alegría.
-            Tus secretos deseo conocer, como un misterio a develar,
-            Eres mi libro favorito, en el que siempre quiero bucear.
-
-            Cada página tuya es un regalo para mi mente,
-            Un viaje sin fin en un río fascinante.
-            Tus detalles son perlas en el mar,
-            Hacen de ti un ser humano, único y sin par.
-
-            Eres tan linda, hermosa, preciosa como una flor,
-            Tu belleza ilumina cada rincón de mi amor.
-            Eres mi luz en la nube negra que se va,
-            Como un rayo de sol en un frío día de invierno ya.
-
-            Te amo, oh mi Antito, con un amor sincero,
-            Que trasciende el tiempo y va más allá del cielo.
-            Cada momento contigo es un tesoro encontrado,
-            En tu presencia, todos mis miedos son desterrados.
-
-            Estar a tu lado es mi más dulce anhelo,
-            Un lugar donde encuentro consuelo.
-            Eres la chispa que enciende mi corazón,
-            Mi eterna pasión, mi eterna canción.
-
-            En este poema, mi amor queda sellado,
-            Mi Antito, mi vida, en cada verso abrazado.
-            Inspira mi pluma Shakespeareana a cantar,
-            El amor profundo que en mi pecho has logrado despertar.
-        </p>
+    <div id="poem5" class="poem">
+        <h2>Poema del 21/08/2023</h2>
+        <p>Bajo el cielo estrellado, mi Antito querida,<br>
+        Mi amor, mi vida, mi musa encendida.<br>
+        Eres el sol que alumbra mis días sin fin,<br>
+        En cada rincón de mi alma te siento latir.</p>
+        
+        <p>Quiero verte, oh Anto, en cada amanecer,<br>
+        Y abrazarte fuerte, mi mundo, mi ser.<br>
+        Tu imagen obsesiona mis pensamientos soñadores,<br>
+        Eres mi refugio, mi puerto de amores.</p>
+        
+        <p>Te necesito como el mar a la orilla ansía,<br>
+        En cada instante más, mi razón y alegría.<br>
+        Tus secretos deseo conocer, como un misterio a develar,<br>
+        Eres mi libro favorito, en el que siempre quiero bucear.</p>
+        
+        <p>Cada página tuya es un regalo para mi mente,<br>
+        Un viaje sin fin en un río fascinante.<br>
+        Tus detalles son perlas en el mar,<br>
+        Hacen de ti un ser humano, único y sin par.</p>
+        
+        <p>Eres tan linda, hermosa, preciosa como una flor,<br>
+        Tu belleza ilumina cada rincón de mi amor.<br>
+        Eres mi luz en la nube negra que se va,<br>
+        Como un rayo de sol en un frío día de invierno ya.</p>
+        
+        <p>Te amo, oh mi Antito, con un amor sincero,<br>
+        Que trasciende el tiempo y va más allá del cielo.<br>
+        Cada momento contigo es un tesoro encontrado,<br>
+        En tu presencia, todos mis miedos son desterrados.</p>
+        
+        <p>Estar a tu lado es mi más dulce anhelo,<br>
+        Un lugar donde encuentro consuelo.<br>
+        Eres la chispa que enciende mi corazón,<br>
+        Mi eterna pasión, mi eterna canción.</p>
+        
+        <p>En este poema, mi amor queda sellado,<br>
+        Mi Antito, mi vida, en cada verso abrazado.<br>
+        Inspira mi pluma Shakespeareana a cantar,<br>
+        El amor profundo que en mi pecho has logrado despertar.</p>
     </div>
 
-    <!-- Poema 6 -->
-    <div class="poem-container">
-        <h2>Poema 6 - Ago 29, 2023</h2>
-        <p>
-            Buenas noches, mi amor, descansa dulce Antito,
-            Tus esfuerzos resplandecen, eres mi orgullo.
-            Cada paso que das, luchando sin cesar,
-            Eres la mejor, eso quiero gritar.
-
-            La lluvia cae suave, como tus lágrimas a veces,
-            Pienso en ti, en estreches.
-            Tu fuerza es como un rayo, iluminando el camino,
-            Seguirás adelante, en cada destino.
-
-            En este poema de amor, quiero que sepas,
-            Eres mi inspiración, la razón por la que me elevo.
-            Nuestro amor florece, como un jardín en primavera,
-            Y contigo a mi lado, enfrentaré cualquier espera.
-
-            Quiero que sepas
-            Amor de mi alma
-            Que junto a la lluvia y yo
-            Tenemos el mismo propósito
-
-            Así que descansa, mi amor, en la noche serena,
-            Mañana será otro día, con luz que nos llena.
-            Tú y yo, unidos, superaremos cualquier prueba,
-            Porque juntas, Antito, nuestra fortaleza se eleva. 💞
-        </p>
+    <div id="poem6" class="poem">
+        <h2>Poema del 29/08/2023</h2>
+        <p>Buenas noches, mi amor, descansa dulce Antito,<br>
+        Tus esfuerzos resplandecen, eres mi orgullo.<br>
+        Cada paso que das, luchando sin cesar,<br>
+        Eres la mejor, eso quiero gritar.</p>
+        
+        <p>La lluvia cae suave, como tus lágrimas a veces,<br>
+        Pienso en ti, en estreches.<br>
+        Tu fuerza es como un rayo, iluminando el camino,<br>
+        Seguirás adelante, en cada destino.</p>
+        
+        <p>En este poema de amor, quiero que sepas,<br>
+        Eres mi inspiración, la razón por la que me elevo.<br>
+        Nuestro amor florece, como un jardín en primavera,<br>
+        Y contigo a mi lado, enfrentaré cualquier espera.</p>
+        
+        <p>Quiero que sepas<br>
+        Amor de mi alma<br>
+        Que junto a la lluvia y yo<br>
+        Tenemos el mismo propósito</p>
+        
+        <p>Así que descansa, mi amor, en la noche serena,<br>
+        Mañana será otro día, con luz que nos llena.<br>
+        Tú y yo, unidos, superaremos cualquier prueba,<br>
+        Porque juntas, Antito, nuestra fortaleza se eleva. 💞</p>
     </div>
 
-    <!-- Poema 7 -->
-    <div class="poem-container">
-        <h2>Poema 7 - Dic 22, 2023</h2>
-        <p>
-            Bajo estrellas brillantes, mi Antito querida,
-            Tus versos, destellos de amor, en mi alma se anidan.
-            Cantamos juntas en esta sinfonía infinita,
-            Nuestro lazo persiste, como llama bendita.
-
-            En el rincón de mis sueños, tú eres el sol,
-            Iluminas mi noche, eres mi faro, mi farol.
-            Atravesamos la lluvia, fuertes y unidos,
-            En este poema eterno, nuestros destinos han sido tejidos.
-
-            Descansa en la noche, mi amor, sueña serena,
-            Eres mi musa, mi estrella, mi Antito, mi reina.
-            Nuestra historia se escribe con tinta de constancia,
-            En cada verso, florece nuestro amor con elegancia.
-        </p>
+    <div id="poem7" class="poem">
+        <h2>Poema del 22/12/2023</h2>
+        <p>Bajo estrellas brillantes, mi Antito querida,<br>
+        Tus versos, destellos de amor, en mi alma se anidan.<br>
+        Cantamos juntas en esta sinfonía infinita,<br>
+        Nuestro lazo persiste, como llama bendita.</p>
+        
+        <p>En el rincón de mis sueños, tú eres el sol,<br>
+        Iluminas mi noche, eres mi faro, mi farol.<br>
+        Atravesamos la lluvia, fuertes y unidos,<br>
+        En este poema eterno, nuestros destinos han sido tejidos.</p>
+        
+        <p>Descansa en la noche, mi amor, sueña serena,<br>
+        Eres mi musa, mi estrella, mi Antito, mi reina.<br>
+        Nuestra historia se escribe con tinta de constancia,<br>
+        En cada verso, florece nuestro amor con elegancia.</p>
     </div>
+</div>
 
-    <footer>
-        <p>Con todo mi amor, para siempre.</p>
-    </footer>
+<footer>
+    <p>Con todo mi amor, para siempre, si lees esto me debes un helado ;3.</p>
+</footer>
+
+<script>
+    const poemSelect = document.getElementById('poemSelect');
+    const poems = document.querySelectorAll('.poem');
+
+    poemSelect.addEventListener('change', function() {
+        poems.forEach(poem => poem.classList.remove('active'));
+        document.getElementById(poemSelect.value).classList.add('active');
+    });
+</script>
+
 </body>
 </html>
